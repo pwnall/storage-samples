@@ -1,0 +1,11 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Service Worker API sample</title>
+<script>
+'use strict';
+
+(async () => {
+  const scope_url =
+  await navigator.serviceWorker.register('service-worker.js');
+})();
+</script>

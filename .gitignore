@@ -1,0 +1,6 @@
+# Self-signed SSL certificate.
+/cert.pem
+/key.pem
+
+# SPKI hash for the SSL certificate.
+/cert-spki.txt
