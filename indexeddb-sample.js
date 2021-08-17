@@ -22,7 +22,7 @@ async function writeDbKey(db, key, value) {
         db.transaction(['data'], 'readwrite', { durability: 'relaxed' });
     const objectStore = transaction.objectStore('data');
     objectStore.put(value, key);
-    transaction.commit();
+    if (transaction.commit) transaction.commit();
     transaction.oncomplete = () => resolve();
     transaction.onerror = () => reject(transaction.error);
   });
